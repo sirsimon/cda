@@ -23,3 +23,16 @@ $($0).parents('dl').find('a').each(function() {
 });
 "\n" + a.reverse().join("\n") + "\n";
 ```
+
+### GIT Bash
+```sh
+# review
+branch="$(git rev-parse --abbrev-ref HEAD)"
+review="git push origin HEAD:refs/for/${branch}"
+${review}
+
+# reset
+branch="$(git rev-parse --abbrev-ref HEAD)"
+reset="git reset --hard origin/${branch}"
+${reset}
+```
